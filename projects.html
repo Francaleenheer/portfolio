@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects Directory | Franca Leenheer Portfolio</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Typography: Cinzel for classical headings, Merriweather for regular text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="relative">
+
+  <!-- ==========================================================================
+       EDITORIAL NAVIGATION BAR (Light #ece0cd bar with #352523 words)
+       ========================================================================== -->
+  <header class="editorial-navbar">
+    <div class="editorial-nav-container">
+      <a href="index.html" class="editorial-logo" title="Main Sanctum">
+        <img src="img_assets/logo.png" alt="Franca Leenheer Logo" class="editorial-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+        <span class="editorial-monogram" style="display:none;"></span>
+      </a>
+
+      <nav class="editorial-nav-menu">
+        <a href="index.html" class="editorial-nav-link">Home</a>
+        <a href="projects.html" class="editorial-nav-link active">Projects</a>
+        <a href="about.html" class="editorial-nav-link">About Me</a>
+        <a href="contact.html" class="editorial-nav-link">Contact</a>
+      </nav>
+
+      <div class="editorial-nav-fleur">
+      </div>
+    </div>
+  </header>
+
+  <!-- SUNLIGHT PARTICLES CANVAS -->
+  <canvas id="sunlight-canvas"></canvas>
+
+  <!-- PROJECTS DIRECTORY MAIN CONTENT -->
+  <main class="relative z-10 max-w-6xl mx-auto px-6 pt-16 pb-24">
+
+    <!-- PAGE HEADER (Font #ece0cd directly on background) -->
+    <header class="text-center mb-12">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#998871]/60 bg-[#ece0cd]/10 text-xs font-bold uppercase tracking-widest text-[#dfc18b] mb-4">
+        <span>Portfolio</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-black text-[#ece0cd] tracking-wider uppercase mb-3 font-['Cinzel']">
+        MY PROJECTS
+      </h1>
+      <p class="max-w-xl mx-auto text-sm sm:text-base text-[#ece0cd]/90 font-['Merriweather'] italic leading-relaxed">
+        A few of the projects I've done in the last year (still ongoing)
+      </p>
+    </header>
+
+    <!-- PALACE NAMEPLATE SHORTCUTS WITH HOVER DROPDOWN MENUS -->
+    <section class="mb-14">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 justify-center items-center">
+        
+        <!-- Dropdown 1: Graphic Design -->
+        <div class="palace-dropdown-wrapper">
+          <div class="palace-nameplate">
+            <span>Graphic</span>
+          </div>
+          <div class="palace-dropdown-menu">
+            <a href="project-detail.html?id=graphic-design" class="palace-dropdown-item"> 'Voluntary Erasure' Poster</a>
+            <a href="project-detail.html?id=typographic-design" class="palace-dropdown-item"> Typographic Design</a>
+          </div>
+        </div>
+
+        <!-- Dropdown 2: UI/UX Design -->
+        <div class="palace-dropdown-wrapper">
+          <div class="palace-nameplate">
+            <span>UI / UX</span>
+          </div>
+          <div class="palace-dropdown-menu">
+            <a href="project-detail.html?id=ui-ux" class="palace-dropdown-item"> Secondhand Marketplace App UX/UI</a>
+          </div>
+        </div>
+
+        <!-- Dropdown 3: Brand Design -->
+        <div class="palace-dropdown-wrapper">
+          <div class="palace-nameplate">
+            <span>Branding</span>
+          </div>
+          <div class="palace-dropdown-menu">
+            <a href="project-detail.html?id=brand-design" class="palace-dropdown-item">Laevis can & brand identity</a>
+          </div>
+        </div>
+
+        <!-- Dropdown 4: Marketing -->
+        <div class="palace-dropdown-wrapper">
+          <div class="palace-nameplate">
+            <span>Marketing</span>
+          </div>
+          <div class="palace-dropdown-menu">
+            <a href="project-detail.html?id=marketing" class="palace-dropdown-item">Gems of Panem Launch</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EDITORIAL DIVIDER -->
+    <div class="editorial-divider">
+      <div class="editorial-divider-line"></div>
+      <div class="editorial-divider-line"></div>
+    </div>
+
+    <!-- THE PROJECT GALLERY (UNIFIED 3-COLUMN GRID: TEXT ABOVE IMAGE) -->
+    <section class="my-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- CARD 1: Graphic Design (Diamond ♦) -->
+        <div class="project-card-grid">
+          <div class="project-card-header">
+            <div class="project-card-symbol-title">
+              <h3 class="project-card-title-text">'Voluntary Erasure' poster</h3>
+            </div>
+            <p class="project-card-subtitle font-['Merriweather'] italic text-xs">Graphic Design • Poster</p>
+          </div>
+          <div class="project-card-img-container">
+            <img src="Category Graphic Design/project 1; poster/01 main image graphic poster.jpg" alt="Graphic Design Poster" class="project-card-grid-img" onerror="this.src='Category Graphic Design/01 main image graphic poster.jpg'">
+            <div class="project-card-overlay">
+              <a href="project-detail.html?id=graphic-design" class="btn-editorial-primary">
+                <span>Explore Case Study</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2: UI/UX Design (Spade ♠) -->
+        <div class="project-card-grid">
+          <div class="project-card-header">
+            <div class="project-card-symbol-title">
+              <h3 class="project-card-title-text">Secondhand Marketplace App</h3>
+            </div>
+            <p class="project-card-subtitle font-['Merriweather'] italic text-xs">UI/UX Design • App Architecture & Flow</p>
+          </div>
+          <div class="project-card-img-container">
+            <img src="img_assets/01 main image ui.png" alt="UI/UX Sanctuary" class="project-card-grid-img" onerror="this.src='Category UIUX/01 main image ui.png'">
+            <div class="project-card-overlay">
+              <a href="project-detail.html?id=ui-ux" class="btn-editorial-primary">
+                <span>Explore Case Study</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3: Brand Design (Club ♣) -->
+        <div class="project-card-grid">
+          <div class="project-card-header">
+            <div class="project-card-symbol-title">
+              <h3 class="project-card-title-text">Laevis can & brand design</h3>
+            </div>
+            <p class="project-card-subtitle font-['Merriweather'] italic text-xs">Brand Design • Packaging & Identity</p>
+          </div>
+          <div class="project-card-img-container">
+            <img src="Category Brand Design/01 Brand Main Image (can).png" alt="Aura Botanical Can" class="project-card-grid-img">
+            <div class="project-card-overlay">
+              <a href="project-detail.html?id=brand-design" class="btn-editorial-primary">
+                <span>Explore Case Study</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 4: Marketing (Heart ♥) -->
+        <div class="project-card-grid">
+          <div class="project-card-header">
+            <div class="project-card-symbol-title">
+              <h3 class="project-card-title-text">Gems of Panem Launch</h3>
+            </div>
+            <p class="project-card-subtitle font-['Merriweather'] italic text-xs">Marketing & PR • Content creation</p>
+          </div>
+          <div class="project-card-img-container">
+            <img src="Category Marketing/01 main image marketing.png" alt="Gems of Panem PR Kit" class="project-card-grid-img">
+            <div class="project-card-overlay">
+              <a href="project-detail.html?id=marketing" class="btn-editorial-primary">
+                <span>Explore Case Study</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 5: Graphic Design 2 / Typographic Leather (Diamond ♦) -->
+        <div class="project-card-grid">
+          <div class="project-card-header">
+            <div class="project-card-symbol-title">
+              <h3 class="project-card-title-text">Typographic Study</h3>
+            </div>
+            <p class="project-card-subtitle font-['Merriweather'] italic text-xs">Graphic Design • Custom Typography</p>
+          </div>
+          <div class="project-card-img-container">
+            <img src="img_assets/typographic design metal logo.jpg" alt="Leather Typography" class="project-card-grid-img" onerror="this.src='Category Graphic Design/02 graphic poster.jpg'">
+            <div class="project-card-overlay">
+              <a href="project-detail.html?id=typographic-design" class="btn-editorial-primary">
+                <span>Explore Case Study</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- EDITORIAL FOOTER (Light #ece0cd bar with #352523 words) -->
+  <footer class="editorial-footer">
+    <div class="editorial-footer-container">
+      <div class="flex items-center gap-3">
+        <img src="img_assets/logo.png" alt="Franca Leenheer Logo" class="h-8 w-auto object-contain" onerror="this.style.display='none';">
+        <span class="font-['Cinzel'] font-bold text-sm tracking-widest uppercase text-[#997947]">Franca Leenheer</span>
+      </div>
+
+      <nav class="footer-nav-menu">
+        <a href="index.html" class="footer-nav-link">Home</a>
+        <a href="projects.html" class="footer-nav-link active">Projects</a>
+        <a href="about.html" class="footer-nav-link">About Me</a>
+        <a href="contact.html" class="footer-nav-link">Contact</a>
+      </nav>
+
+      <div class="text-xs text-[#997947] font-['Cinzel']">
+        © 2026 • All Rights Reserved
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>

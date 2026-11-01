@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Case Study | Franca Leenheer</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <style>
+    /* Lightbox Modal Styles */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      z-index: 100;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(15, 10, 9, 0.92);
+      backdrop-filter: blur(8px);
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .lightbox-modal.active {
+      display: flex;
+    }
+    .lightbox-img {
+      max-width: 90vw;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: 4px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+      border: 1px solid rgba(223, 193, 139, 0.3);
+    }
+  </style>
+</head>
+<body class="relative">
+
+  <!-- NAVIGATION BAR -->
+  <header class="editorial-navbar">
+    <div class="editorial-nav-container">
+      <a href="index.html" class="editorial-logo" title="Main Sanctum">
+        <img src="img_assets/logo.png" alt="Franca Leenheer Logo" class="editorial-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+        <span class="editorial-monogram" style="display:none;">⚜</span>
+      </a>
+
+      <nav class="editorial-nav-menu">
+        <a href="index.html" class="editorial-nav-link">Home</a>
+        <a href="projects.html" class="editorial-nav-link active">Projects</a>
+        <a href="about.html" class="editorial-nav-link">About Me</a>
+        <a href="contact.html" class="editorial-nav-link">Contact</a>
+      </nav>
+
+      <div class="editorial-nav-fleur">
+      </div>
+    </div>
+  </header>
+
+  <!-- VIEWPORT SUNLIGHT PARTICLES CANVAS -->
+  <canvas id="sunlight-canvas"></canvas>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="relative z-10 max-w-5xl mx-auto px-6 pt-16 pb-20">
+
+    <!-- BACK BUTTON -->
+    <div class="mb-8">
+      <a href="projects.html" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#dfc18b] font-['Cinzel'] hover:opacity-75 transition">
+        <span>← Back to Archive</span>
+      </a>
+    </div>
+
+    <!-- TOP CASE STUDY INTRO BOX -->
+    <div class="bg-[#f4eee1] text-[#2c221e] border border-[#997947]/40 rounded-lg p-8 sm:p-12 shadow-2xl mb-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        
+        <!-- LEFT: MAIN THUMBNAIL -->
+        <div class="lg:col-span-6">
+          <div class="w-full h-[400px] bg-[#2a1c1a] rounded overflow-hidden shadow-inner border border-[#997947]/30">
+            <img id="project-main-img" src="" alt="Project Exhibit" class="w-full h-full object-cover">
+          </div>
+        </div>
+
+        <!-- RIGHT: DETAILS & METADATA -->
+        <div class="lg:col-span-6 space-y-6">
+          <div id="project-tags" class="flex flex-wrap gap-2"></div>
+
+          <div class="border-t border-b border-[#997947]/30 py-4 my-4">
+            <p class="text-[10px] font-bold uppercase tracking-widest text-[#997947] font-['Cinzel']">Client</p>
+            <p id="project-client" class="text-base font-['Merriweather'] font-bold text-[#2c221e] mt-1">-</p>
+          </div>
+
+          <div class="bg-[#e8dfd1] p-5 rounded border border-[#997947]/20">
+            <h3 class="text-xs font-bold uppercase tracking-widest text-[#997947] font-['Cinzel'] mb-2">Concept Inception</h3>
+            <p id="project-desc" class="text-sm font-['Merriweather'] text-[#5c4a42] leading-relaxed">-</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- EDITORIAL DIVIDER -->
+    <div class="editorial-divider my-12">
+      <div class="editorial-divider-line"></div>
+    </div>
+
+    <!-- PROJECT STORY & PROCESS -->
+    <section class="mb-16">
+      <div class="text-center mb-8">
+        <h3 class="text-2xl sm:text-3xl font-black uppercase tracking-widest font-['Cinzel'] text-[#ece0cd]">
+          Project Story & Process
+        </h3>
+      </div>
+
+      <div class="max-w-4xl mx-auto">
+        <div id="project-story" class="space-y-6 font-['Merriweather'] text-base sm:text-lg text-[#ece0cd]/90 leading-relaxed text-center sm:text-left">
+          <!-- Dynamic story paragraphs rendered directly on dark background -->
+        </div>
+      </div>
+    </section>
+
+    <!-- EDITORIAL DIVIDER -->
+    <div class="editorial-divider my-12">
+      <div class="editorial-divider-line"></div>
+    </div>
+
+    <!-- BORDERLESS GALLERY SECTION WITH LIGHTBOX ZOOM -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-black uppercase tracking-widest font-['Cinzel'] text-[#ece0cd]">
+          Gallery
+        </h2>
+      </div>
+
+      <!-- Clean Grid for Gallery Images -->
+      <div id="gallery-container" class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <!-- Dynamic borderless gallery images render here -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- LIGHTBOX POPUP MODAL -->
+  <div id="lightbox" class="lightbox-modal" onclick="closeLightbox()">
+    <div class="relative flex flex-col items-center">
+      <button class="absolute -top-10 right-0 text-[#dfc18b] text-xs uppercase tracking-widest font-['Cinzel'] font-bold hover:text-white">✕ Close [ESC]</button>
+      <img id="lightbox-img" class="lightbox-img" src="" alt="Enlarged Artwork">
+      <p id="lightbox-caption" class="text-center font-['Cinzel'] text-xs uppercase tracking-widest text-[#dfc18b] mt-4"></p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="editorial-footer">
+    <div class="editorial-footer-container">
+      <div class="flex items-center gap-3">
+        <img src="img_assets/logo.png" alt="Franca Leenheer Logo" class="h-8 w-auto object-contain" onerror="this.style.display='none';">
+        <span class="font-['Cinzel'] font-bold text-sm tracking-widest uppercase text-[#997947]">Franca Leenheer</span>
+      </div>
+
+      <nav class="footer-nav-menu">
+        <a href="index.html" class="footer-nav-link">Home</a>
+        <a href="projects.html" class="footer-nav-link">Projects</a>
+        <a href="about.html" class="footer-nav-link">About Me</a>
+        <a href="contact.html" class="footer-nav-link">Contact</a>
+      </nav>
+
+      <div class="text-xs text-[#997947] font-['Cinzel']">
+        © 2026 • All Rights Reserved
+      </div>
+    </div>
+  </footer>
+
+  <!-- DYNAMIC DATA SCRIPT -->
+  <script>
+    const projectsData = {
+      'graphic-design': {
+        title: "Voluntary Erasure",
+        client: "Media Design, CMD year 1",
+        image: "Category Graphic Design/project 1; poster/01 main image graphic poster.jpg",
+        tags: ["Poster Design", "Social issues"],
+        desc: "A vintage-inspired graphic poster exploring how constant social media consumption leads to the gradual loss of personal identity.",
+        story: [
+          "Voluntary Erasure is a graphic poster exploring how constant exposure on social media can erode personal identity. The concept blends a semi-vintage medical aesthetic with a blunt modern critique, featuring a historical lobotomy tool extending directly out of a smartphone screen. It uses stark, illustrative visuals to comment on the quiet, self-inflicted loss of personality driven by digital consumption."
+        ],
+        gallery: [
+          {
+            src: "Category Graphic Design/project 1; poster/02 graphic poster.jpg",
+            caption: "Poster Composition Variant I"
+          },
+          {
+            src: "Category Graphic Design/project 1; poster/03 graphic poster.png",
+            caption: "Poster Composition Variant II"
+          }
+        ]
+      },
+      'ui-ux': {
+        title: "Secondhand Marketplace App",
+        client: "Digital Marketplace Concept",
+        image: "Category UIUX/01 main image ui.png",
+        tags: ["UI/UX Design", "App Architecture", "Flow"],
+        desc: "Designing the interface and UI architecture of a sustainable secondhand clothing marketplace app.",
+        story: [
+          "A user-friendly UI/UX design for a mobile second-hand clothing app focused on clarity and ease of use. The interface utilizes warm, inviting tones to create a welcoming atmosphere, featuring streamlined navigation and an intuitive step-by-step item uploading process."
+        ],
+        gallery: [
+          {
+            src: "Category UIUX/01 main image ui.png",
+            caption: "Mobile Interface Overview"
+          },
+          {
+            src: "Category UIUX/02 ui image.png",
+            caption: "Mobile Interface Detail"
+          }
+        ]
+      },
+      'brand-design': {
+        title: "Laevis: Brand Design",
+        client: "Fictive Botanical Soda Company",
+        image: "Category Brand Design/01 Brand Main Image (can).png",
+        tags: ["Brand Design", "Packaging", "Identity"],
+        desc: "A sleek brand identity and packaging design for Laevis, a botanical soda tailored for health-conscious young adults through subtle, minimalist aesthetics.",
+        story: [
+          "Laevis is a brand identity and packaging design for a botanical soda, built around the core keywords 'botanical' and 'subtle'. Aimed at health-conscious young adults looking for a trendy yet mindful lifestyle, the brand combines clean typography with delicate, plant-inspired line art. The visual identity spans a complete brand book and a minimalist, refreshing can design that reflects the natural, understated character of the drink."
+        ],
+        gallery: [
+          {
+            src: "Category Brand Design/01 Brand Main Image (can).png",
+            caption: "Packaging Prototype"
+          },
+          {
+            src: "Category Brand Design/02 brand poster.jpg",
+            caption: "Marketing Poster"
+          }
+        ]
+      },
+      'marketing': {
+        title: "Gems of Panem Launch",
+        client: "Lionsgate Partnership",
+        image: "Category Marketing/01 main image marketing.png",
+        tags: ["Marketing & PR", "Content Creation"],
+        desc: "Collaborating with Lionsgate and Thinkjam on the Gem of Panem marketing campaign for The Hunger Games, creating social content across platforms and attending the Los Angeles premiere.",
+        story: [
+          "As part of Lionsgate and Thinkjam’s official marketing campaign for The Hunger Games prequel in 2023, Gem of Panem, I collaborated with fellow content creators and a major movie studio to produce and distribute promotional social media content. This role involved cross-platform audience reach, strategic content creation, and culminated in attending the official red-carpet movie premiere in Los Angeles."
+        ],
+        gallery: [
+          {
+            src: "Category Marketing/01 main image marketing.png",
+            caption: "Gems of Panem group-photo"
+          }
+        ]
+      },
+      'typographic-design': {
+        title: "Typographic Design",
+        client: "Personal Experimental Work",
+        image: "Category Graphic Design/project 2; typography/typographic design metal logo.jpg",
+        tags: ["Graphic Design", "Custom Typography"],
+        desc: "A custom experimental fantasy-metal typographic branding project exploring intricate, aggressive letterforms and dark aesthetic design.",
+        story: [
+          "A personal typographic branding project exploring custom lettering within a dark fantasy and metal aesthetic. As an initial exploration into letterform design, the piece features ornate, sharp flourishes and aggressive line work, mimicking heavy metal logo styling while maintaining an intricate, high-fantasy mood.."
+        ],
+        gallery: [
+          {
+            src: "Category Graphic Design/project 2; typography/typographic design metal logo.jpg",
+            caption: "Custom Letterform Study"
+          }
+        ]
+      }
+    };
+
+    // Load URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const projectId = urlParams.get('id') || 'graphic-design';
+    const project = projectsData[projectId] || projectsData['graphic-design'];
+
+    // Populate Top Meta Card
+    document.getElementById('project-client').textContent = project.client;
+    document.getElementById('project-desc').textContent = project.desc;
+    document.getElementById('project-main-img').src = project.image;
+
+    const tagsContainer = document.getElementById('project-tags');
+    tagsContainer.innerHTML = '';
+    project.tags.forEach(tag => {
+      const tagSpan = document.createElement('span');
+      tagSpan.className = "px-3 py-1 bg-[#e8dfd1] border border-[#997947]/30 text-[10px] font-bold uppercase tracking-widest font-['Cinzel'] text-[#5c4a42] rounded";
+      tagSpan.textContent = tag;
+      tagsContainer.appendChild(tagSpan);
+    });
+
+    // Populate Story Paragraphs directly on dark background
+    const storyContainer = document.getElementById('project-story');
+    storyContainer.innerHTML = '';
+    project.story.forEach(paragraph => {
+      const p = document.createElement('p');
+      p.textContent = paragraph;
+      storyContainer.appendChild(p);
+    });
+
+    // Render Gallery Images without borders or emojis
+    const galleryContainer = document.getElementById('gallery-container');
+    galleryContainer.innerHTML = '';
+
+    project.gallery.forEach((item) => {
+      const wrapper = document.createElement('div');
+      wrapper.className = "flex flex-col items-center group cursor-pointer";
+      wrapper.onclick = () => openLightbox(item.src, item.caption);
+
+      wrapper.innerHTML = `
+        <div class="w-full overflow-hidden rounded-md shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]">
+          <img src="${item.src}" alt="${item.caption}" class="w-full h-auto object-cover block" onerror="this.src='Category Graphic Design/project 1; poster/01 main image graphic poster.jpg'">
+        </div>
+        <p class="mt-3 text-xs font-['Cinzel'] uppercase tracking-widest text-[#dfc18b] group-hover:text-white transition">${item.caption}</p>
+      `;
+
+      galleryContainer.appendChild(wrapper);
+    });
+
+    // Lightbox functions
+    function openLightbox(src, caption) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-caption').textContent = caption;
+      document.getElementById('lightbox').classList.add('active');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+</body>
+</html>
