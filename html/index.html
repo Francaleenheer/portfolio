@@ -6,27 +6,23 @@
   <title>Portfolio | Franca Leenheer - Product Designer & Visual Storyteller</title>
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Typography: Cinzel for classical headings, Merriweather for regular body text -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap" rel="stylesheet">
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body class="relative">
 
-  <!-- ==========================================================================
-       EDITORIAL NAVIGATION BAR (Light #ece0cd bar with #352523 words)
-       ========================================================================== -->
+  <!-- EDITORIAL NAVIGATION BAR -->
   <header class="editorial-navbar">
     <div class="editorial-nav-container">
-      <!-- Left: Custom Logo Image -->
       <a href="index.html" class="editorial-logo" title="Main Sanctum">
-        <img src="img_assets/logo.png" alt="Franca Leenheer Logo" class="editorial-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
-        <span class="editorial-monogram" style="display:none;"></span>
+        <img src="../img_assets/logo.png" alt="Franca Leenheer Logo" class="editorial-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+        <span class="editorial-monogram" style="display:none;">⚜</span>
       </a>
 
-      <!-- Center: Clean Navigation Menu -->
       <nav class="editorial-nav-menu">
         <a href="index.html" class="editorial-nav-link active">Home</a>
         <a href="projects.html" class="editorial-nav-link">Projects</a>
@@ -34,8 +30,8 @@
         <a href="contact.html" class="editorial-nav-link">Contact</a>
       </nav>
 
-      <!-- Right: Fleur-de-lis Insignia -->
       <div class="editorial-nav-fleur">
+        <span>⚜</span>
       </div>
     </div>
   </header>
@@ -43,21 +39,20 @@
   <!-- VIEWPORT SUNLIGHT PARTICLES CANVAS -->
   <canvas id="sunlight-canvas"></canvas>
 
-  <!-- MAIN CONTENT CONTAINER -->
+  <!-- TOP HERO CONTAINER -->
   <main class="relative z-10 max-w-7xl mx-auto px-6 pt-16 pb-12">
-
-    <!-- HERO SECTION (TWO-COLUMN EDITORIAL LAYOUT) -->
+    <!-- HERO SECTION -->
     <section class="min-h-[70vh] flex items-center justify-center py-12">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full">
         
-        <!-- LEFT COLUMN: GREETING & MAIN TAGLINE -->
-        <div class="lg:col-span-6 text-left space-y-6">
+        <!-- LEFT COLUMN -->
+        <div class="lg:col-span-7 text-left space-y-6">
           <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-[#998871]/60 bg-[#ece0cd]/10 text-xs font-bold uppercase tracking-widest text-[#dfc18b]">
-            <span>Product & Brand Design</span>
+            <span>Product & Brand Designer</span>
           </div>
 
           <h2 class="text-2xl sm:text-3xl text-[#dfc18b] font-light tracking-wide font-['Cinzel']">
-            Hi! Welcome to my digital archive.
+            Hi! Welcome to my digital portfolio.
           </h2>
 
           <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-[#ece0cd] tracking-tight leading-[1.18] font-['Cinzel']">
@@ -79,94 +74,87 @@
           </div>
         </div>
 
-        <!-- RIGHT COLUMN: THE FAN-OUT DECK CARDS -->
-        <div class="lg:col-span-6 flex flex-col items-center justify-center">
+        <!-- RIGHT COLUMN: FAN-OUT CARDS -->
+        <div class="lg:col-span-5 flex flex-col items-center justify-center">
           <div class="text-center mb-4">
-            <p class="text-xs uppercase tracking-widest text-[#dfc18b] font-bold font-['Cinzel']">The Dealer's Hand</p>
+            <p class="text-xs uppercase tracking-widest text-[#dfc18b] font-bold font-['Cinzel']">The Player Deck</p>
+            <p class="text-xs text-[#ece0cd]/80 font-['Merriweather'] italic mt-0.5">(Hover deck to fan out cards & flip disciplines)</p>
           </div>
 
           <div class="card-deck-stage">
-            
-            <!-- CARD 1: UI/UX DESIGN (Spade ) -->
             <div class="deck-fan-item">
               <a href="projects.html#ui-ux" class="block w-full h-full text-inherit">
                 <div class="deck-card-inner">
                   <div class="deck-card-face deck-card-resting">
-                    <img src="img_assets/card uxui preflip.jpg" alt="UI/UX Preflip" class="deck-card-img">
+                    <img src="../img_assets/card uxui preflip.jpg" alt="UI/UX Preflip" class="deck-card-img">
                   </div>
                   <div class="deck-card-face deck-card-revealed">
-                    <img src="img_assets/card ui and ux flipped.jpg" alt="UI/UX Flipped Art" class="deck-card-img" onerror="this.src='img_assets/card uxui flpped.jpg'">
+                    <img src="../img_assets/card ui and ux flipped.jpg" alt="UI/UX Flipped Art" class="deck-card-img" onerror="this.src='img_assets/card uxui flpped.jpg'">
                   </div>
                 </div>
               </a>
-              <span class="card-badge-pill">UI/UX </span>
+              <span class="card-badge-pill">UI/UX</span>
             </div>
 
-            <!-- CARD 2: GRAPHIC DESIGN (Diamond ) -->
             <div class="deck-fan-item">
               <a href="projects.html#graphic-design" class="block w-full h-full text-inherit">
                 <div class="deck-card-inner">
                   <div class="deck-card-face deck-card-resting">
-                    <img src="img_assets/card graphic design preflip.jpg" alt="Graphic Design Preflip" class="deck-card-img">
+                    <img src="../img_assets/card graphic design preflip.jpg" alt="Graphic Design Preflip" class="deck-card-img">
                   </div>
                   <div class="deck-card-face deck-card-revealed">
-                    <img src="img_assets/card graphic design flipped.jpg" alt="Graphic Design Flipped Art" class="deck-card-img">
+                    <img src="../img_assets/card graphic design flipped.jpg" alt="Graphic Design Flipped Art" class="deck-card-img">
                   </div>
                 </div>
               </a>
-              <span class="card-badge-pill">Graphic </span>
+              <span class="card-badge-pill">Graphic</span>
             </div>
 
-            <!-- CARD 3: BRAND DESIGN (Club ♣) -->
             <div class="deck-fan-item">
               <a href="projects.html#brand-design" class="block w-full h-full text-inherit">
                 <div class="deck-card-inner">
                   <div class="deck-card-face deck-card-resting">
-                    <img src="img_assets/card brand design preflip.jpg" alt="Brand Design Preflip" class="deck-card-img">
+                    <img src="../img_assets/card brand design preflip.jpg" alt="Brand Design Preflip" class="deck-card-img">
                   </div>
                   <div class="deck-card-face deck-card-revealed">
-                    <img src="img_assets/card brand design flipped.jpg" alt="Brand Design Flipped Art" class="deck-card-img">
+                    <img src="../img_assets/card brand design flipped.jpg" alt="Brand Design Flipped Art" class="deck-card-img">
                   </div>
                 </div>
               </a>
-              <span class="card-badge-pill">Branding </span>
+              <span class="card-badge-pill">Branding</span>
             </div>
 
-            <!-- CARD 4: MARKETING (Heart ♥) -->
             <div class="deck-fan-item">
               <a href="projects.html#marketing" class="block w-full h-full text-inherit">
                 <div class="deck-card-inner">
                   <div class="deck-card-face deck-card-resting">
-                    <img src="img_assets/cards marketing preflip.jpg" alt="Marketing Preflip" class="deck-card-img">
+                    <img src="../img_assets/cards marketing preflip.jpg" alt="Marketing Preflip" class="deck-card-img">
                   </div>
                   <div class="deck-card-face deck-card-revealed">
-                    <img src="img_assets/card marketig flipped.jpg" alt="Marketing Flipped Art" class="deck-card-img">
+                    <img src="../img_assets/card marketig flipped.jpg" alt="Marketing Flipped Art" class="deck-card-img">
                   </div>
                 </div>
               </a>
-              <span class="card-badge-pill">Marketing </span>
+              <span class="card-badge-pill">Marketing</span>
             </div>
-
           </div>
         </div>
 
       </div>
     </section>
+  </main> <!-- CLOSE TOP MAIN CONTAINER HERE -->
 
-<!-- CLEAN EDITORIAL DIVIDER 1 -->
-      <div class="editorial-divider-line"></div>
-    </div>
-  </main>
 
-  <!-- SECTION 2: "PROJECTS I'VE DONE" (With Full-Width Cream Background Band) -->
+  <!-- SECTION 2: FULL-WIDTH CREAM CAROUSEL BAND (OUTSIDE OF MAIN) -->
   <section class="full-width-carousel-section">
     <div class="max-w-7xl mx-auto px-6">
+      
       <div class="text-center mb-10">
-        <h3 class="text-3xl sm:text-4xl font-black uppercase tracking-widest font-['Cinzel']">
+        <h3 class="text-3xl sm:text-4xl font-black uppercase tracking-widest font-['Cinzel'] text-[#352523]">
           Projects I've Done
         </h3>
-        <p class="text-sm sm:text-base font-['Merriweather'] italic mt-2 opacity-80">
-          My ongoing portfolio, showcasing some of my graphic work.
+        <p class="text-sm sm:text-base font-['Merriweather'] italic mt-2 text-[#5c4a42]">
+          A continuous showcase of selected works. Click any exhibit to enter its detailed case study.
         </p>
       </div>
 
@@ -175,85 +163,80 @@
           
           <a href="project-detail.html?id=brand-design" class="carousel-card-auto">
             <div class="carousel-card-img-wrapper">
-              <img src="Category Brand Design/01 Brand Main Image (can).png" alt="Aura Botanical Can" class="carousel-card-img">
+              <img src="../Category Brand Design/01 Brand Main Image (can).png" alt="Aura Botanical Can" class="carousel-card-img">
             </div>
             <div class="carousel-card-body text-left">
               <span class="text-xs font-bold uppercase tracking-widest text-[#997947] font-['Cinzel']">Brand Identity</span>
-              <h4 class="text-base font-bold mt-1 mb-1 font-['Cinzel']">Laevis Brand Design</h4>
-              <p class="text-xs font-['Merriweather']">Brand and Graphic design for a botanical soda drink.</p>
+              <h4 class="text-base font-bold text-[#352523] mt-1 mb-1 font-['Cinzel']">'Laevis' Branding</h4>
+              <p class="text-xs font-['Merriweather'] text-[#5c4a42]">Designing 'Laevis' packaging, and brand identity.</p>
             </div>
           </a>
 
           <a href="project-detail.html?id=graphic-design" class="carousel-card-auto">
             <div class="carousel-card-img-wrapper">
-              <img src="Category Graphic Design/project 1; poster/01 main image graphic poster.jpg" alt="Editorial Poster" class="carousel-card-img" onerror="this.src='Category Graphic Design/01 main image graphic poster.jpg'">
+              <img src="../Category Graphic Design/project 1; poster/01 main image graphic poster.jpg" alt="Editorial Poster" class="carousel-card-img" onerror="this.src='Category Graphic Design/01 main image graphic poster.jpg'">
             </div>
             <div class="carousel-card-body text-left">
               <span class="text-xs font-bold uppercase tracking-widest text-[#997947] font-['Cinzel']">Graphic Design</span>
-              <h4 class="text-base font-bold mt-1 mb-1 font-['Cinzel']">'Voluntary Erasure' poster</h4>
-              <p class="text-xs font-['Merriweather']">Graphic poster designed around the theme of social media addiction.</p>
+              <h4 class="text-base font-bold text-[#352523] mt-1 mb-1 font-['Cinzel']">'Voluntary Erasure' poster</h4>
+              <p class="text-xs font-['Merriweather'] text-[#5c4a42]">Moody poster designed to spread awareness about a social dilemma.</p>
             </div>
           </a>
 
           <a href="project-detail.html?id=marketing" class="carousel-card-auto">
             <div class="carousel-card-img-wrapper">
-              <img src="Category Marketing/01 main image marketing.png" alt="Gems of Panem PR" class="carousel-card-img">
+              <img src="../Category Marketing/01 main image marketing.png" alt="Gems of Panem PR" class="carousel-card-img">
             </div>
             <div class="carousel-card-body text-left">
               <span class="text-xs font-bold uppercase tracking-widest text-[#997947] font-['Cinzel']">Marketing & PR</span>
-              <h4 class="text-base font-bold mt-1 mb-1 font-['Cinzel']">Gems of Panem Launch</h4>
-              <p class="text-xs font-['Merriweather']">My experience of working with Lionsgate to promote their movie; The Hunger Games; The Ballad of Songbirds and Snakes.</p>
+              <h4 class="text-base font-bold text-[#352523] mt-1 mb-1 font-['Cinzel']">Gems of Panem PR</h4>
+              <p class="text-xs font-['Merriweather'] text-[#5c4a42]">Partnering with Lionsgate to promote the Hunger Games: A Ballad of Songbirds and Snakes.</p>
             </div>
           </a>
 
-          <a href="project-detail.html?id=typographic-design" class="carousel-card-auto">
+          <a href="project-detail.html?id=ui-ux" class="carousel-card-auto">
             <div class="carousel-card-img-wrapper">
-              <img src="img_assets/typographic design metal logo.jpg" alt="Digital Sanctuary App" class="carousel-card-img">
+              <img src="../Category UIUX/01 main image ui.png" alt="Digital Sanctuary App" class="carousel-card-img">
             </div>
             <div class="carousel-card-body text-left">
-              <span class="text-xs font-bold uppercase tracking-widest text-[#997947] font-['Cinzel']">Graphic Design</span>
-              <h4 class="text-base font-bold mt-1 mb-1 font-['Cinzel']">Typographic Design</h4>
-              <p class="text-xs font-['Merriweather']">An experimental typographic design.</p>
+              <span class="text-xs font-bold uppercase tracking-widest text-[#997947] font-['Cinzel']">UI/UX Design</span>
+              <h4 class="text-base font-bold text-[#352523] mt-1 mb-1 font-['Cinzel']">Secondhand Marketplace App Interface</h4>
+              <p class="text-xs font-['Merriweather'] text-[#5c4a42]">Designing the interface and UI of a secondhand marketplace app for clothes.</p>
             </div>
           </a>
 
           <!-- DUPLICATED SET FOR INFINITE SEAMLESS LOOP -->
           <a href="project-detail.html?id=brand-design" class="carousel-card-auto">
             <div class="carousel-card-img-wrapper">
-              <img src="Category Brand Design/01 Brand Main Image (can).png" alt="Aura Botanical Can" class="carousel-card-img">
+              <img src="../Category Brand Design/01 Brand Main Image (can).png" alt="Aura Botanical Can" class="carousel-card-img">
             </div>
             <div class="carousel-card-body text-left">
               <span class="text-xs font-bold uppercase tracking-widest text-[#997947] font-['Cinzel']">Brand Identity</span>
-              <h4 class="text-base font-bold mt-1 mb-1 font-['Cinzel']">Aura Botanical Elixir</h4>
-              <p class="text-xs font-['Merriweather']">Artisan metallic foil packaging and bespoke identity.</p>
+              <h4 class="text-base font-bold text-[#352523] mt-1 mb-1 font-['Cinzel']">Aura Botanical Elixir</h4>
+              <p class="text-xs font-['Merriweather'] text-[#5c4a42]">Artisan metallic foil packaging and bespoke identity.</p>
             </div>
           </a>
 
           <a href="project-detail.html?id=graphic-design" class="carousel-card-auto">
             <div class="carousel-card-img-wrapper">
-              <img src="Category Graphic Design/project 1; poster/01 main image graphic poster.jpg" alt="Editorial Poster" class="carousel-card-img" onerror="this.src='Category Graphic Design/01 main image graphic poster.jpg'">
+              <img src="../Category Graphic Design/project 1; poster/01 main image graphic poster.jpg" alt="Editorial Poster" class="carousel-card-img" onerror="this.src='Category Graphic Design/01 main image graphic poster.jpg'">
             </div>
             <div class="carousel-card-body text-left">
               <span class="text-xs font-bold uppercase tracking-widest text-[#997947] font-['Cinzel']">Graphic Design</span>
-              <h4 class="text-base font-bold mt-1 mb-1 font-['Cinzel']">Editorial Noir Typography</h4>
-              <p class="text-xs font-['Merriweather']">Moody classical poster compositions with tactile accents.</p>
+              <h4 class="text-base font-bold text-[#352523] mt-1 mb-1 font-['Cinzel']">Editorial Noir Typography</h4>
+              <p class="text-xs font-['Merriweather'] text-[#5c4a42]">Moody classical poster compositions with tactile accents.</p>
             </div>
           </a>
 
         </div>
       </div>
+
     </div>
   </section>
 
-  <!-- CLEAN EDITORIAL DIVIDER 1 -->
-    <div class="editorial-divider">
-    </div>
-  </main>
 
-  <!-- RESUME MAIN CONTAINER FOR QUOTE -->
+  <!-- BOTTOM MAIN CONTAINER FOR QUOTE & FOOTER -->
   <main class="relative z-10 max-w-7xl mx-auto px-6 pb-12">
-
-
     <!-- SECTION 3: PHILOSOPHICAL QUOTE -->
     <section class="my-16">
       <div class="quote-sanctum-box text-center">
@@ -267,15 +250,14 @@
         </div>
       </div>
     </section>
-
   </main>
 
-  <!-- SECTION 4: MINIMALIST EDITORIAL FOOTER (Light #ece0cd bar with #352523 words) -->
+  <!-- FOOTER -->
   <footer class="editorial-footer">
     <div class="editorial-footer-container">
       <div class="flex items-center gap-3">
-        <img src="img_assets/logo.png" alt="Franca Leenheer Logo" class="h-8 w-auto object-contain" onerror="this.style.display='none';">
-        <span class="font-['Cinzel'] font-bold text-sm tracking-widest uppercase text-[#997947]">Franca Leenheer</span>
+        <img src="../img_assets/logo.png" alt="Franca Leenheer Logo" class="h-8 w-auto object-contain" onerror="this.style.display='none';">
+        <span class="font-['Cinzel'] font-bold text-sm tracking-widest uppercase text-[#352523]">Franca Leenheer</span>
       </div>
 
       <nav class="footer-nav-menu">
@@ -285,13 +267,12 @@
         <a href="contact.html" class="footer-nav-link">Contact</a>
       </nav>
 
-      <div class="text-xs text-[#997947] font-['Cinzel']">
+      <div class="text-xs text-[#352523] font-['Cinzel']">
         © 2026 • All Rights Reserved
       </div>
     </div>
   </footer>
 
-  <!-- Core JavaScript -->
-  <script src="js/script.js"></script>
+  <script src="../js/script.js"></script>
 </body>
 </html>
