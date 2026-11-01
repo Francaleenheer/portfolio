@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | Franca Leenheer - Product Designer & Visual Storyteller</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="relative">
+
+  <!-- NAVIGATION BAR -->
+  <header class="editorial-navbar">
+    <div class="editorial-nav-container">
+      <a href="index.html" class="editorial-logo" title="Main Sanctum">
+        <img src="img_assets/logo.png" alt="Franca Leenheer Logo" class="editorial-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+        <span class="editorial-monogram" style="display:none;">⚜</span>
+      </a>
+
+      <nav class="editorial-nav-menu">
+        <a href="index.html" class="editorial-nav-link">Home</a>
+        <a href="projects.html" class="editorial-nav-link">Projects</a>
+        <a href="about.html" class="editorial-nav-link active">About Me</a>
+        <a href="contact.html" class="editorial-nav-link">Contact</a>
+      </nav>
+
+      <div class="editorial-nav-fleur">
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- VIEWPORT SUNLIGHT PARTICLES CANVAS -->
+  <canvas id="sunlight-canvas"></canvas>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="relative z-10 max-w-6xl mx-auto px-6 pt-16 pb-20">
+
+    <!-- PAGE HEADER -->
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-[#998871]/60 bg-[#ece0cd]/10 text-xs font-bold uppercase tracking-widest text-[#dfc18b] mb-4">
+        <span></span>
+        <span>The Designer Behind The Work</span>
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-black text-[#ece0cd] tracking-wider uppercase font-['Cinzel']">
+        About Me
+      </h1>
+    </div>
+
+
+    <!-- EDITORIAL DIVIDER UNDER ABOUT ME -->
+<div class="editorial-divider my-10">
+  <div class="editorial-divider-line"></div>
+</div>
+
+    <!-- TWO-COLUMN ABOUT SECTION (No big wrapper box, text & image directly on background) -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      
+      <!-- LEFT COLUMN: ORNAMENT / PORTRAIT -->
+      <div class="lg:col-span-5 flex flex-col items-center">
+<div class="relative">
+  <img src="img_assets/portrait image.png" alt="Franca Leenheer Portrait" class="w-full h-auto object-cover max-w-[440px] drop-shadow-2xl">
+</div>
+      </div>
+
+      <!-- RIGHT COLUMN: BIO TEXT -->
+      <div class="lg:col-span-7 space-y-6 text-[#ece0cd]/90 font-['Merriweather']">
+        
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-[#dfc18b] font-['Cinzel']">Product Designer & Visual Storyteller</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#dfc18b] font-['Cinzel'] mt-1 mb-4">
+            Hi, I'm Franca!
+          </h2>
+          <p class="text-base sm:text-lg italic leading-relaxed text-[#ece0cd]">
+            Combining empathy, curiosity, and medieval-gothic aesthetics to craft designs that click on a human level.
+          </p>
+        </div>
+
+        <p class="text-sm sm:text-base leading-relaxed text-[#ece0cd]/80">
+          As a product designer, I’ve always been someone who loves to dive deep into a concept, figure out what makes it tick, and translate that feeling into a design that truly fits the user. For me, it's all about having a sharp eye for atmosphere and detail, making sure a concept doesn't just look good, but actually clicks on a human level.
+        </p>
+
+        <p class="text-sm sm:text-base leading-relaxed text-[#ece0cd]/80">
+          My path to design has been a bit unconventional. Before focusing fully on product design, I studied Safety and Security Management. That background taught me how to genuinely help people, make complex information clear, and design with real societal impact in mind. On top of that, I've spent years creating content and building an online audience, including an official partnership with Lionsgate, which taught me how to tell stories that capture attention and connect with people on social media platforms such as Instagram.
+        </p>
+
+        <p class="text-sm sm:text-base leading-relaxed text-[#ece0cd]/80">
+          Outside of standard design work, I love pouring my creativity into personal projects. I'm always inspired by medieval and gothic aesthetics, which you can see in my experimental custom typography, tactile layouts, and moody, dark-luxury concepts. I believe the best work comes from a mix of curiosity, empathy, and just letting yourself get a little lost in the creative process.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- OPTIONAL SUB-SECTION: ACADEMIC & CONTACT OVERVIEW -->
+    <section class="mt-20">
+      <div class="about-info-box max-w-3xl mx-auto text-center">
+        <h3 class="text-xs font-bold uppercase tracking-widest text-[#dfc18b] font-['Cinzel'] mb-3">Academic & Contact Overview</h3>
+        <p class="text-sm text-[#ece0cd]/90 font-['Merriweather'] leading-relaxed">
+          Ready to collaborate or would you like to commission me? Feel free to reach out via the contact page or check out my detailed academic credentials.
+        </p>
+        <div class="mt-6">
+          <a href="contact.html" class="btn-editorial-primary">
+            <span>Get In Touch</span>
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="editorial-footer">
+    <div class="editorial-footer-container">
+      <div class="flex items-center gap-3">
+        <img src="img_assets/logo.png" alt="Franca Leenheer Logo" class="h-8 w-auto object-contain" onerror="this.style.display='none';">
+        <span class="font-['Cinzel'] font-bold text-sm tracking-widest uppercase text-[#997947]">Franca Leenheer</span>
+      </div>
+
+      <nav class="footer-nav-menu">
+        <a href="index.html" class="footer-nav-link">Home</a>
+        <a href="projects.html" class="footer-nav-link">Projects</a>
+        <a href="about.html" class="footer-nav-link">About Me</a>
+        <a href="contact.html" class="footer-nav-link">Contact</a>
+      </nav>
+
+      <div class="text-xs text-[#997947] font-['Cinzel']">
+        © 2026 • All Rights Reserved
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
